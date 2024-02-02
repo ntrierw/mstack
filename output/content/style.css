@@ -46,7 +46,8 @@ body {
 }
 
 .navbox {
- margin-left: auto;
+  margin-left: auto;
+  margin-top: 5px;
 }
 
 .hero p {
