@@ -1,6 +1,7 @@
 import markdown
 import os
 import glob
+import re
 
 # Get the list of markdown files in content/ directory
 md_files = glob.glob("content/*.md")
@@ -23,6 +24,9 @@ for md_file in md_files:
     # Read the markdown file
     with open(md_file, "r") as f:
         md_text = f.read()
+    
+    # Find the text between the h1 tag in the markdown
+    h1_text = re.search(r"# (.*)\n", md_text).group(1)
 
     # Convert markdown to html
     html = markdown.markdown(md_text)
@@ -35,7 +39,8 @@ for md_file in md_files:
         # Prepend the html files before m.html
         for file in before_m:
             with open(file, "r") as g:
-                f.write(g.read())
+                htmlRead = g.read()
+                f.write(htmlRead.replace("$title$", h1_text))
 
         # Write the converted html
         f.write(html)
