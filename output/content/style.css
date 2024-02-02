@@ -67,12 +67,16 @@ body {
   margin-left: 25px;
 }
 
+.logo a {
+  color: #F9FAF8
+  text-decoration: none;
+}
+
 .logo {
   font-size: 18px;
   color: #F9FAF8;
   flex: 1;
   align-self: center;
-  text:decoration: none;
 }
 
 .hero h1 {
