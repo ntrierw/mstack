@@ -42,6 +42,7 @@ body {
   font-size: 18px;
   display: flex;
   flex-direction: row;
+  flex: 2 1 0%;
 }
 
 .navbox {
