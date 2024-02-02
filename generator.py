@@ -26,7 +26,7 @@ for md_file in md_files:
 
     # Write the output file to the output directory
     with open(os.path.join(output_dir, output_file), "w") as f:
-        # Prepend the html files before m.html
+        # Prepend top html file
         with open("template/top.html", "r") as g:
             htmlRead = g.read()
             f.write(htmlRead.replace("$title$", h1_text))
@@ -34,6 +34,6 @@ for md_file in md_files:
         # Write the converted html
         f.write(html)
 
-        # Append the html files after m.html
+        # Append bottom html file
         with open("template/bottom.html", "r") as g:
             f.write(g.read())
