@@ -27,13 +27,10 @@ for md_file in md_files:
     # Write the output file to the output directory
     with open(os.path.join(output_dir, output_file), "w") as f:
         # Prepend top html file
-        with open("template/top.html", "r") as g:
+        with open("template/template.html", "r") as g:
             htmlRead = g.read()
-            f.write(htmlRead.replace("$title$", h1_text))
-
+            htmlRead = htmlRead.replace("$title$", h1_text)            
+        
+        htmlRead = htmlRead.replace("$content$", html)
         # Write the converted html
-        f.write(html)
-
-        # Append bottom html file
-        with open("template/bottom.html", "r") as g:
-            f.write(g.read())
+        f.write(htmlRead)
