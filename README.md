@@ -10,7 +10,7 @@ How to use:
 
 Tips:
 
-- $content$ determines where the content is placed in the template
-- $title$ takes the text in the h1 tag of the content and sets the title tage for each page
+- \$content\$ determines where the content is placed in the template
+- \$title\$ takes the text in the h1 tag of the content and sets the title tage for each page
 - CSS can be placed in the output/content directory
 - Each markdown file creates its own html page
