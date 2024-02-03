@@ -16,7 +16,7 @@ To build your website, run the following command:
 
 <!-- start:code block --> python3 generate.py<!-- end:code block -->
 
-
+<br>
 This will generate files in the `output/content` folder with your static website files that you can deploy to any hosting service.
 
 ## Features
