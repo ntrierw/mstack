@@ -6,7 +6,9 @@ Mstack is a simple and minimalistic static site generator that lets you create b
 
 To install Mstack, you need to have Python installed on your system. Then, run the following command:
 
-<!-- start:code block --> pip3 install markdown<!-- end:code block -->
+```
+pip3 install markdown
+```
 
 ## Usage
 
@@ -14,9 +16,9 @@ The `content` folder contains your Markdown files that will be converted into HT
 
 To build your website, run the following command:
 
-<!-- start:code block --> python3 generate.py<!-- end:code block -->
-
-<br><br>
+```
+python3 generate.py
+```
 
 This will generate files in the `output/content` folder with your static website files that you can deploy to any hosting service.
 
