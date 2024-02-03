@@ -1,16 +1,26 @@
-# mstack
+# Mstack
 
-mstack is a minimalistic static site generator using python
+Mstack is a simple and minimalistic static site generator that lets you create beautiful websites from Markdown files. It's fast, lightweight (1KB!), and easy to use.
 
-How to use:
+## Installation
 
-- Modify template.html to your liking
-- Create content in markdown format in the content directory
-- Run generator.py to generate web pages
+To install Mstack, you need to have Python installed on your system. Then, run the following command:
 
-Tips:
+<!-- start:code block --> pip3 install markdown<!-- end:code block -->
 
-- \$content\$ determines where the content is placed in the template
-- \$title\$ takes the text in the h1 tag of the content and sets the title tage for each page
-- CSS can be placed in the output/content directory
-- Each markdown file creates its own html page
+## Usage
+
+The `content` folder contains your Markdown files that will be converted into HTML pages. The `template` folder contains your HTML template that will be used to render your pages.
+
+To build your website, run the following command:
+
+<!-- start:code block --> python3 generate.py<!-- end:code block -->
+
+This will generate files in the `output/content` folder with your static website files that you can deploy to any hosting service.
+
+## Features
+
+Mstack has the following features:
+
+- **Markdown support**: You can write your content in Markdown, a simple and expressive syntax that makes writing easier and more enjoyable.
+- **Custom layout support**: You can define your own HTML template for different types of pages, such as home page, blog post, or contact page.
