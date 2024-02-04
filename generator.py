@@ -26,7 +26,6 @@ for md_file in md_files:
 
     # Write the output file to the output directory
     with open(os.path.join(output_dir, output_file), "w") as f:
-        # Prepend template html file
         with open("template/template.html", "r") as g:
             htmlRead = g.read()
             htmlRead = htmlRead.replace("$title$", h1_text)            
