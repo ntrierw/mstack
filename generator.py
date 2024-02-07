@@ -2,6 +2,7 @@ import markdown
 import os
 import glob
 import re
+import sys
 
 # Get the list of markdown files in content/ directory
 md_files = glob.glob("content/*.md")
@@ -31,5 +32,12 @@ for md_file in md_files:
             htmlRead = htmlRead.replace("$title$", h1_text)            
         
         htmlRead = htmlRead.replace("$content$", html)
+        
+        # Read plugin files and execute run function
+        sys.path.append('plugin/')
+        for file in os.listdir("plugin/"):
+            if file.endswith(".py"):
+                module = __import__(file[:-3])        
+                htmlRead = module.run(htmlRead)
         # Write the converted html
         f.write(htmlRead)
